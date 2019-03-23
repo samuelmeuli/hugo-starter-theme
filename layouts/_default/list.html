@@ -1,0 +1,25 @@
+{{ define "main" }}
+	<!-- Default template for list pages (e.g. list of posts) -->
+
+	<!-- Title and content of list page -->
+	<h2>{{ .Title }}</h2>
+	{{ .Content }}
+
+	<!-- List of pages -->
+	<ul>
+		{{ range .Pages }}
+			<li class="post-preview">
+				<h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+				<p class="post-info">
+					{{ .Date.Format "January 2, 2006" }} –
+					{{ range $index, $element := .Params.categories }}
+						{{- if $index }},{{ end }}
+						{{ $element -}}
+					{{ end }}
+				</p>
+				<p>{{ .Summary }}</p>
+			</li>
+		{{ end }}
+	</ul>
+
+{{ end }}
