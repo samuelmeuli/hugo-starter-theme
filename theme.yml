@@ -1,0 +1,12 @@
+name: "Test"
+license: "MIT"
+licenselink: "https://github.com/samuelmeuli/hugo-starter-theme/blob/master/LICENSE.md"
+description: ""
+homepage: "https://github.com/samuelmeuli/hugo-starter-theme"
+tags: []
+features: []
+min_version: "0.41"
+
+author:
+  name: Samuel Meuli
+  homepage: https://samuelmeuli.com
