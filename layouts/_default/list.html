@@ -1,21 +1,23 @@
 {{ define "main" }}
 	<!-- Default template for list pages (e.g. list of posts) -->
 
-	<!-- Title and content of list page -->
-	<h2>{{ .Title }}</h2>
-	{{ .Content }}
+	<div class="post-section">
+		<!-- Title and content of list page -->
+		<h2>{{ .Title }}</h2>
+		{{ .Content }}
 
-	<!-- List of pages -->
-	<ul>
-		{{ range .Pages }}
-			<li class="post-preview">
-				<h3>
-					<a href="{{ .Permalink }}">{{ .Title }}</a>
-				</h3>
-				{{ partial "post-info.html" . }}
-				<p>{{ .Summary }}</p>
-			</li>
-		{{ end }}
-	</ul>
+		<!-- List of pages -->
+		<ul>
+			{{ range .Pages }}
+				<li class="post-preview">
+					<h3>
+						<a href="{{ .Permalink }}">{{ .Title }}</a>
+					</h3>
+					{{ partial "post-info.html" . }}
+					<p>{{ .Summary }}</p>
+				</li>
+			{{ end }}
+		</ul>
+	</div>
 
 {{ end }}

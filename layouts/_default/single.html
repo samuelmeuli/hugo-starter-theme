@@ -1,7 +1,9 @@
 {{ define "main" }}
 	<!-- Default template for single pages -->
 
-	<h2 class="post-title">{{ .Title }}</h2>
-	{{ .Content }}
+	<div class="page">
+		<h2 class="page-title">{{ .Title }}</h2>
+		{{ .Content }}
+	</div>
 
 {{ end }}

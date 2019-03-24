@@ -1,23 +1,25 @@
 {{ define "main" }}
 	<!-- Default template for blog posts -->
 
-	<article>
-		<h2 class="post-title">{{ .Title }}</h2>
-		{{ partial "post-info.html" . }}
-		<div class="post-content">
-			{{ .Content }}
-		</div>
-	</article>
+	<div class="post">
+		<article>
+			<h2 class="post-title">{{ .Title }}</h2>
+			{{ partial "post-info.html" . }}
+			<div class="post-content">
+				{{ .Content }}
+			</div>
+		</article>
 
-	<hr>
+		<hr>
 
-	<ul class="post-actions">
-		<li>
-			<a href="..">All posts</a>
-		</li>
-		<li>
-			<a href="../index.xml">Subscribe</a>
-		</li>
-	</ul>
+		<ul class="post-actions">
+			<li>
+				<a href="..">All posts</a>
+			</li>
+			<li>
+				<a href="../index.xml">Subscribe</a>
+			</li>
+		</ul>
+	</div>
 
 {{ end }}
