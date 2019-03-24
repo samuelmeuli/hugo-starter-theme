@@ -1,7 +1,11 @@
 {{ define "main" }}
 	<!-- Default template for 404 page -->
 
-	<h1>Page not found</h1>
-	<a href="{{ .Site.BaseURL | relLangURL }}">Go to homepage</a>
+	<h2>Page not found</h1>
+	<p class="not-found-message">
+		<a href="{{ .Site.BaseURL | relLangURL }}">
+			Go to homepage
+		</a>
+	</p>
 
 {{ end }}
