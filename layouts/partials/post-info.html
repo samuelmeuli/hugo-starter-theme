@@ -9,7 +9,9 @@
 			{{ range $index, $category := . }}
 				{{- if gt $index 0 }}, {{ end -}}
 				{{ with $.Site.GetPage (printf "/categories/%s" ($category | urlize)) -}}
-					<a href="{{ .Permalink }}">{{ $category }}</a>
+					<li>
+						<a href="{{ .Permalink }}">{{ $category }}</a>
+					</li>
 				{{- end -}}
 			{{ end }}
 		{{ end }}
