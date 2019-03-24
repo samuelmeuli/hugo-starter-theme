@@ -1,9 +1,12 @@
 {{ define "main" }}
 	<!-- Default template for blog posts -->
 
-	<article class="post-content">
+	<article>
 		<h2 class="post-title">{{ .Title }}</h2>
-		{{ .Content }}
+		{{ partial "post-info.html" . }}
+		<div class="post-content">
+			{{ .Content }}
+		</div>
 	</article>
 
 	<hr>
