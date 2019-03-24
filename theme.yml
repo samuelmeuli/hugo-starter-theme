@@ -1,11 +1,11 @@
-name: "Test"
-license: "MIT"
-licenselink: "https://github.com/samuelmeuli/hugo-starter-theme/blob/master/LICENSE.md"
-description: ""
-homepage: "https://github.com/samuelmeuli/hugo-starter-theme"
-tags: []
-features: []
-min_version: "0.41"
+name: Hugo Starter Theme
+license: MIT
+licenselink: https://github.com/samuelmeuli/hugo-starter-theme/blob/master/LICENSE.md
+description: Boilerplate for building custom Hugo themes
+homepage: https://github.com/samuelmeuli/hugo-starter-theme
+tags: [boilerplate, blog, navigation]
+features: [blog, navigation]
+min_version: 0.41
 
 author:
   name: Samuel Meuli
