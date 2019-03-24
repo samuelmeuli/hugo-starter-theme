@@ -3,8 +3,11 @@
 
 	<div class="post">
 		<article>
-			<h2 class="post-title">{{ .Title }}</h2>
-			{{ partial "post-info.html" . }}
+			<div class="post-head">
+				<h2 class="post-title">{{ .Title }}</h2>
+				{{ partial "post-info.html" . }}
+			</div>
+
 			<div class="post-content">
 				{{ .Content }}
 			</div>

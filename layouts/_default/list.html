@@ -3,11 +3,11 @@
 
 	<div class="post-section">
 		<!-- Title and content of list page -->
-		<h2>{{ .Title }}</h2>
+		<h2 class="post-section-title">{{ .Title }}</h2>
 		{{ .Content }}
 
 		<!-- List of pages -->
-		<ul>
+		<ul class="post-list">
 			{{ range .Pages }}
 				<li class="post-preview">
 					<h3>
