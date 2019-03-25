@@ -1,7 +1,7 @@
 name: Hugo Starter Theme
 license: MIT
 licenselink: https://github.com/samuelmeuli/hugo-starter-theme/blob/master/LICENSE.md
-description: Boilerplate for building custom Hugo themes
+description: Boilerplate for building a custom Hugo theme
 homepage: https://github.com/samuelmeuli/hugo-starter-theme
 tags: [boilerplate, blog, navigation]
 features: [blog, navigation]
