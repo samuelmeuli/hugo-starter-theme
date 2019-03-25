@@ -5,7 +5,6 @@
 	<ul class="post-categories">
 		{{ $taxonomy := "categories" }}
 		{{ with .Param $taxonomy }}
-			{{ if gt (len .) 1 }}Categories{{ else }}Category{{ end }}:
 			{{ range $index, $category := . }}
 				{{- if gt $index 0 }}, {{ end -}}
 				{{ with $.Site.GetPage (printf "/categories/%s" ($category | urlize)) -}}
