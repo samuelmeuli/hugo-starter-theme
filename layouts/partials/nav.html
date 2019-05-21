@@ -1,12 +1,13 @@
 <nav>
 	<ul>
-		{{- $firstUrlElement := print "/" (index (split .URL "/") 1) "/" -}}
+		{{- $parentItemUrl := print "/" (index (split .RelPermalink "/") 1) "/" -}}
 		{{- range .Site.Menus.nav -}}
-		<li class="nav-item {{ if or ($.IsMenuCurrent "nav" .) (eq ($firstUrlElement|lower) (.URL|lower)) }}nav-item-active{{ end }}">
-			<a href="{{ .URL }}">
-				{{ .Title }}
-			</a>
-		</li>
+			{{ $itemUrl := .Page.RelPermalink }}
+			<li class="nav-item {{ if or ($.IsMenuCurrent "nav" .) (eq $parentItemUrl $itemUrl) }}nav-item-active{{ end }}">
+				<a href="{{ $itemUrl }}">
+					{{ .Title }}
+				</a>
+			</li>
 		{{ end }}
 	</ul>
 </nav>
