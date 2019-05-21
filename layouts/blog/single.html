@@ -16,6 +16,13 @@
 		<hr>
 
 		<ul class="post-actions">
+			{{ $githubUrl := .Site.Params.github }}
+			{{ if $githubUrl }}
+				{{ $editUrl := print $githubUrl "/edit/master/content/" .File }}
+				<li>
+					<a href="{{ $editUrl }}">Edit</a>
+				</li>
+			{{ end }}
 			<li>
 				<a href="..">All posts</a>
 			</li>
