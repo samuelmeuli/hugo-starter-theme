@@ -17,3 +17,10 @@ Make sure you have Hugo installed.
 3. `git init`
 4. `git submodule add https://github.com/samuelmeuli/hugo-starter-theme themes/hugo-starter-theme`
 5. `echo 'theme = hugo-starter-theme' >> config.toml`
+
+## Configuration
+
+The following parameters are supported by default:
+
+- **`githubUrl`**: URL to the site's GitHub repository. If specified, blog posts will contain an "Edit" link
+- **`rssUrl`**: URL to the blog's RSS feed. If specified, blog posts will contain a link to the feed
