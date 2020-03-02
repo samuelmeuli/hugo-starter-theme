@@ -26,9 +26,12 @@
 			<li>
 				<a href="..">All posts</a>
 			</li>
-			<li>
-				<a href="/index.xml">Subscribe</a>
-			</li>
+			{{ $rssUrl := .Site.Params.rssUrl }}
+			{{ if $rssUrl }}
+				<li>
+					<a href="{{ $rssUrl }}">Subscribe</a>
+				</li>
+			{{ end }}
 		</ul>
 	</div>
 
