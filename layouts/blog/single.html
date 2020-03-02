@@ -16,7 +16,7 @@
 		<hr>
 
 		<ul class="post-actions">
-			{{ $githubUrl := .Site.Params.github }}
+			{{ $githubUrl := .Site.Params.githubUrl }}
 			{{ if $githubUrl }}
 				{{ $editUrl := print $githubUrl "/edit/master/content/" .File.Path }}
 				<li>
