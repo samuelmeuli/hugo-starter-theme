@@ -1,11 +1,12 @@
 {{ define "main" }}
-	<!-- Default template for 404 page -->
-
-	<h2>Page not found</h2>
-	<p class="not-found-message">
-		<a href="{{ .Site.BaseURL | relLangURL }}">
-			Go to homepage
-		</a>
-	</p>
-
+	<!--
+		"404 Not found" page. May not work out of the box depending on the deployment setup (see the
+		Hugo docs).
+	-->
+	<div class="page not-found-page">
+		<h2 class="page-title not-found-title">Page not found</h2>
+		<div class="page-content not-found-content">
+			<p><a href="{{ .Site.BaseURL | relLangURL }}">Go to homepage</a></p>
+		</div>
+	</div>
 {{ end }}

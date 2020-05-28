@@ -1,9 +1,15 @@
 {{ define "main" }}
-	<!-- Default template for single pages -->
+	<!--
+		Default template for a single page. Additional classes are includedd for posts (pages with a
+		publication date).
+	-->
+	<div class="page{{ if .Date }} post{{ end }}">
+		<article>
+			<h2 class="page-title{{ if .Date }} post-title{{ end }}">{{ .Title }}</h2>
+			{{ partial "post-metadata.html" . }}
+			<div class="page-content{{ if .Date }} post-content{{ end }}">{{ .Content }}</div>
+		</article>
 
-	<div class="page">
-		<h2 class="page-title">{{ .Title }}</h2>
-		<div class="page-content">{{ .Content }}</div>
+		{{ partial "post-actions.html" . }}
 	</div>
-
 {{ end }}

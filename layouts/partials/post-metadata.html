@@ -1,0 +1,25 @@
+<!--
+	Post metadata: Publication date and optional category list. Only displayed for posts (pages with a
+	publication date).
+-->
+{{ if .Date }}
+	<div class="post-metadata">
+		<!-- Post creation date -->
+		{{ if .Date }}
+		<p class="post-date-created">
+			<time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+		</p>
+		{{ end }}
+
+		<!-- List of post's categories (category names link to their respective pages) -->
+		<ul class="post-category-list">
+			{{ with .Param "categories" }}
+				{{ range $index, $category := . }}
+					{{- with $.Site.GetPage (printf "/categories/%s" ($category | urlize)) -}}
+						<li class="post-category"><a href="{{ .Permalink }}">{{ $category }}</a></li>
+					{{- end -}}
+				{{ end }}
+			{{ end }}
+		</ul>
+	</div>
+{{ end }}

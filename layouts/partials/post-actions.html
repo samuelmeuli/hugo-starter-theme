@@ -1,0 +1,15 @@
+<!--
+	Links for actions related to the current post. Only displayed for posts (pages with a publication
+	date).
+-->
+{{ if .Date }}
+	<div class="post-actions">
+		<ul>
+			<!-- URL to the section list page -->
+			<li><a href="..">All posts</a></li>
+
+			<!-- URL to the section's RSS feed -->
+			<li><a href="../index.xml">Subscribe</a></li>
+		</ul>
+	</div>
+{{ end }}

@@ -1,0 +1,20 @@
+<!--
+	Navigation: Lists all items in the "main" menu. For each menu entry, its path is compared with the
+	current page's first path component to determine wheter it is child of that page. If so, the menu
+	item is marked as active.
+-->
+<nav class="navigation">
+	<ul>
+		{{ $pagePath := .RelPermalink }}
+		{{ $pagePathSplit := split $pagePath "/" }}
+		{{ $pageFirstPathPart := cond (eq $pagePath "/") "/" (print "/" (index $pagePathSplit 1) "/") }}
+		{{ range .Site.Menus.main }}
+			{{ $menuItemPath := .Page.RelPermalink }}
+			<li class="navigation-item{{ if eq $pageFirstPathPart $menuItemPath }} navigation-item-active{{ end }}">
+				<a href="{{ $menuItemPath }}">
+					{{- .Title -}}
+				</a>
+			</li>
+		{{ end }}
+	</ul>
+</nav>

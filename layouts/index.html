@@ -1,9 +1,9 @@
 {{ define "main" }}
-	<!-- Default template for homepage -->
-
-	<article>
-		<h2>{{ .Title }}</h2>
-		{{ .Content }}
-	</article>
-
+	<!--
+		Homepage.
+	-->
+	<div class="page homepage">
+		<h2 class="page-title homepage-title">{{ .Title }}</h2>
+		<div class="page-content homepage-content">{{ .Content }}</div>
+	</div>
 {{ end }}

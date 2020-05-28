@@ -1,9 +1,5 @@
-<header>
-	<!-- Site title -->
-	<h1>
-		<a href="{{ .Site.BaseURL | relLangURL }}">{{ .Site.Title }}</a>
-	</h1>
-
-	<!-- Navigation -->
-	{{ partial "nav.html" . }}
+<!-- Site header with title and main menu. -->
+<header class="header">
+	<h1 class="site-title"><a href="{{ .Site.BaseURL | relLangURL }}">{{ .Site.Title }}</a></h1>
+	{{ partial "navigation.html" . }}
 </header>
