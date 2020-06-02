@@ -37,6 +37,9 @@
 				{{ with .Site.Author.email }}
 					<author>{{ . }}{{ with $.Site.Author.name }} ({{ . }}){{ end }}</author>
 				{{ end }}
+				{{ range .Param "categories" }}
+					<category>{{ . }}</category>
+				{{ end }}
 				<content:encoded>
 					{{ chomp "<![CDATA[" }}
 					{{ .Content | html }}
